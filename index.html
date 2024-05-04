@@ -68,22 +68,17 @@ var table = new Tabulator("#table", {
     movableColumns:true,
     paginationCounter:"rows",
     columns: [
-        {title: "Protocollo", field: "Protocollo", headerFilter:"input"},
-        {title: "DataOraIncidente", field: "DataOraIncidente", headerFilter:"input"},
-        {title: "Localizzazione1", field: "Localizzazione1", headerFilter:"input"},
-        {title: "STRADA1", field: "STRADA1", headerFilter:"input"},
-        {title: "Localizzazione2", field: "Localizzazione2", headerFilter:"input"},
-        {title: "STRADA2", field: "STRADA2", headerFilter:"input"},
-        {title: "Strada02", field: "Strada02", headerFilter:"input"},
-        {title: "Chilometrica", field: "Chilometrica", headerFilter:"input"},
-        {title: "DaSpecificare", field: "DaSpecificare", headerFilter:"input"},
-        {title: "Longitude", field: "Longitude", headerFilter:"input"},
-        {title: "Latitude", field: "Latitude", headerFilter:"input"},
+        {title: "Protocol", field: "protocol", headerFilter:"input"},
+        {title: "DateTime", field: "date_time", headerFilter:"input"},
+        {title: "Week Day", field: "day_of_week", headerFilter:"input"},
+        {title: "Type of accident", field: "type_of_accident", headerFilter:"input"},
+        {title: "Longitude", field: "longitude", headerFilter:"input"},
+        {title: "Latitude", field: "latitude", headerFilter:"input"},
     ],
 });
 
 function datum2latlon(datum) {
-    return {lat: datum["Latitude"], lon: datum["Longitude"]}
+    return {lat: datum["latitude"], lon: datum["longitude"]}
 }
 
 table.on('tableBuilt', function(){
